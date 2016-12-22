@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run build",
     "build": "gulp build",
     "watch": "gulp watch",
     "lint": "gulp lint",
-    "start": "gulp build && node dist/index.js",
+    "start": "node dist/index.js",
     "test": "mocha --reporter spec --compilers ts:ts-node/register test/**/*.test.ts"
   },
   "keywords": [],
@@ -24,15 +25,15 @@
     "@types/node": "^6.0.46",
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
+    "mocha": "^3.1.2",
+    "ts-node": "^1.6.1",
+    "tslint": "4.1.1"
+  },
+  "dependencies": {
+    "typescript": "^2.0.6",
     "gulp": "^3.9.1",
     "gulp-tslint": "7.0.1",
     "gulp-typescript": "^3.1.1",
-    "mocha": "^3.1.2",
-    "ts-node": "^1.6.1",
-    "tslint": "4.1.1",
-    "typescript": "^2.0.6"
-  },
-  "dependencies": {
     "body-parser": "^1.15.2",
     "debug": "^2.2.0",
     "express": "^4.14.0",
